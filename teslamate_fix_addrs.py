@@ -295,6 +295,7 @@ def http_request(url):
             return None
         raw = response.text
         return raw
+        time.sleep(10)  # 间隔10秒
     except:
         logging.error("Http request exception by url: %s" % (url))
         return None
