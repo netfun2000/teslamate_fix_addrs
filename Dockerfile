@@ -1,8 +1,8 @@
-FROM ubuntu:22.04
+FROM python:3.9.22-alpine3.22
 
 RUN mkdir /root/app
 
-RUN apt update && apt install -y python3 python3-pip
+RUN apk add --no-cache postgresql-dev gcc python3-dev musl-dev
 
 COPY * /root/app
 
